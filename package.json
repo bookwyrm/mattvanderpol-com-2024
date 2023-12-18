@@ -1,0 +1,36 @@
+{
+  "name": "@rms/tailcraft-base-theme",
+  "version": "1.0.0",
+  "description": "Supporting assets and processes for building CSS and JavaScript for the TailCraft base theme.",
+  "main": "index.js",
+  "scripts": {
+    "prod:js": "esbuild ./src-assets/js/main.js --bundle --outfile=./assets/js/main.js --minify",
+    "dev:js": "esbuild ./src-assets/js/main.js --bundle --outfile=./assets/js/main.js",
+    "watch:js": "esbuild ./src-assets/js/main.js --bundle --outfile=./assets/js/main.js --watch",
+    "prod:css": "postcss ./src-assets/css/styles.css --use cssnano -o ./assets/css/styles.css",
+    "dev:css": "postcss ./src-assets/css/styles.css -o ./assets/css/styles.css",
+    "watch:css": "postcss ./src-assets/css/styles.css -o ./assets/css/styles.css --watch",
+    "dev": "concurrently \"npm run dev:css\" \"npm run dev:js\"",
+    "prod": "concurrently \"npm run prod:css\" \"npm run prod:js\"",
+    "watch": "concurrently \"npm run watch:css\" \"npm run watch:js\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.6",
+    "@tailwindcss/typography": "^0.5.10",
+    "alpinejs": "^3.13.2",
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.1",
+    "set-scrollbar-width": "^1.0.5",
+    "tailwindcss": "^3.3.3",
+    "tailwindcss-fluid-type": "^2.0.3"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "esbuild": "^0.19.5",
+    "postcss": "^8.4.30",
+    "postcss-cli": "^10.1.0",
+    "tailwindcss-debug-screens": "^2.2.1"
+  }
+}

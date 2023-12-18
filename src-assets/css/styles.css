@@ -1,0 +1,299 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --twcb-scrollbar-width: 0px;
+  }
+
+    @font-face {
+        font-family: "Brandon Text Regular";
+        font-weight: normal;
+        font-style: normal;
+        src: url("../fonts/Brandon-Text-Web-Regular.eot") format("eot"),
+            url("../fonts/Brandon-Text-Web-Regular.woff") format("woff"),
+            url("../fonts/Brandon-Text-Web-Regular.woff2") format("woff2");
+    }
+
+    @font-face {
+        font-family: "Brandon Grotesque Condensed Medium";
+        font-style: normal;
+        font-weight: normal;
+        src: url("../fonts/Brandon-Grotesque-Cond-Web-Medium.eot") format("eot"),
+            url("../fonts/Brandon-Grotesque-Cond-Web-Medium.woff") format("woff"),
+            url("../fonts/Brandon-Grotesque-Cond-Web-Medium.woff2") format("woff2");
+    }
+    @font-face {
+        font-family: "Brandon Grotesque Condensed Bold";
+        font-style: normal;
+        font-weight: normal;
+        src: url("../fonts/Brandon-Grotesque-Cond-Web-Bold.eot") format("eot"),
+            url("../fonts/Brandon-Grotesque-Cond-Web-Bold.woff") format("woff"),
+            url("../fonts/Brandon-Grotesque-Cond-Web-Bold.woff2") format("woff2");
+    }
+    @font-face {
+        font-family: "Brandon Text Medium";
+        font-weight: normal;
+        font-style: normal;
+        src: url("../fonts/Brandon-Text-Web-Medium.eot") format("eot"),
+            url("../fonts/Brandon-Text-Web-Medium.woff") format("woff"),
+            url("../fonts/Brandon-Text-Web-Medium.woff2") format("woff2");
+    }
+
+    @font-face {
+        font-family: "Brandon Text Bold";
+        font-weight: normal;
+        font-style: normal;
+        src: url("../fonts/Brandon-Text-Web-Bold.eot") format("eot"),
+            url("../fonts/Brandon-Text-Web-Bold.woff") format("woff"),
+            url("../fonts/Brandon-Text-Web-Bold.woff2") format("woff2");
+    }
+
+    @font-face {
+        font-family: 'MonoLisa';
+        font-style: normal;
+        src: url('../fonts/MonoLisaVariableNormal.woff2') format('woff2');
+    }
+
+
+
+
+
+  body {
+    @apply bg-gray-100;
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl font-normal font-heading leading-tight;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl font-medium font-heading;
+    margin-top: 1em;
+  }
+
+  h3 {
+    @apply text-xl sm:text-2xl font-medium;
+    margin-top: 1em;
+  }
+
+  h4 {
+    @apply text-lg sm:text-xl font-medium;
+  }
+
+  h1 + p, h2 + p, h3 + p, p + p {
+    margin-top: 0.5em;
+  }
+
+  pre, 
+  pre.wp-block-preformatted,
+  pre > code,
+  pre.wp-block-code > code 
+  {
+    @apply font-mono text-sm;
+  }
+}
+
+.c-framed--with-caption {
+  @apply pt-7 px-8 pb-0 bg-white drop-shadow-lg rounded-lg overflow-hidden;
+
+  img {
+    @apply rounded-md;
+  }
+  #content & figcaption, figcaption {
+    @apply bg-none text-gray-800 font-normal text-lg static mt-2 font-caption;
+  }
+}
+
+.c-intro {
+  @apply text-lg my-24 md:mx-12 [text-wrap:balance];
+  
+  a {
+    @apply inline-flex font-link items-baseline;
+
+    svg {
+      @apply inline h-8 fill-current;
+    }
+  }
+}
+
+.c-gallery {
+  > figure {
+    @apply scale-90 transition-transform;
+
+    &:nth-child(1) {
+      @apply -rotate-2;
+    }
+
+    &:nth-child(2) {
+      @apply rotate-1;
+    }
+
+    &:nth-child(3) {
+      @apply -rotate-1;
+    }
+
+    &:nth-child(4) {
+      @apply rotate-2;
+    }
+
+    &:nth-child(5) {
+      @apply -rotate-2;
+    }
+
+    &:hover {
+      @apply scale-100 rotate-0;
+    }
+  }
+}
+
+
+.c-project-set > * {
+  @apply lg:flex flex-wrap gap-y-6;
+
+  > header {
+    @apply basis-full;
+  }
+
+  > .c-project {
+    @apply basis-1/2;
+  }
+}
+
+.c-project {
+  @apply bg-gradient-to-r from-neutral-100 to-white p-6 pr-12 mb-0 rounded-lg dark:from-neutral-900 dark:to-gray-900;
+
+  > .wp-block-column:first-of-type {
+    @apply !basis-40 flex items-start justify-end;
+  }
+
+  > .wp-block-column:last-of-type {
+    @apply flex flex-col justify-start;
+  }
+
+  img {
+    @apply max-h-32 w-auto shadow-lg;
+  }
+
+  .wp-block-image {
+    @apply mb-0;
+  }
+
+  h4 {
+    @apply [text-wrap:balance] mb-1.5;
+  }
+
+  p {
+    @apply leading-tight;
+  }
+
+  a {
+    @apply underline;
+  }
+}
+
+.c-featured-content {
+  > ul {
+    @apply sm:flex flex-wrap gap-y-6;
+
+    > li {
+      @apply basis-1/2;
+
+      &:nth-child(odd) {
+        @apply sm:pr-8;
+      }
+
+      &:nth-child(even) {
+        @apply sm:pl-8;
+      }
+    }
+  }
+}
+
+.c-photo {
+  @apply border-8 border-gray-100 drop-shadow-lg;
+}
+
+.c-banner {
+  @apply mx-break-out px-break-out bg-slate-700;
+
+  p {
+    @apply text-white font-medium py-20 max-w-3xl mx-auto leading-snug text-4xl;
+  }
+}
+
+.c-banner--lg {
+  @apply mx-break-out px-break-out bg-slate-700;
+
+  p {
+    @apply text-white font-bold py-32 leading-snug text-5xl;
+  }
+}
+
+.wpforms-container {
+  @apply mt-5;
+
+  input[type="text"], input[type="tel"], input[type="email"], input[type="number"] {
+    @apply block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6;
+  }
+
+  select {
+    @apply block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6;
+  }
+
+  textarea {
+    @apply block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6;
+  }
+
+  .wpforms-field-label {
+    @apply block text-sm font-medium leading-6 text-gray-900;
+  }
+
+  .wpforms-field-sublabel {
+    @apply mt-1 text-sm leading-6 text-gray-600;
+  }
+
+  .wpforms-field-divider {
+    @apply border-t border-slate-400 mt-10 pt-10;
+  }
+
+  h3 {
+    @apply text-xl font-semibold leading-7 text-gray-900;
+  }
+
+  .wpforms-submit {
+    @apply inline-block rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)];
+  }
+}
+
+.wp-block-buttons {
+  .wp-block-button {
+    &.is-style-outline > .wp-block-button__link {
+      @apply inline-flex items-center justify-center rounded-full py-2 px-4 text-lg font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-blue-600 text-white hover:text-slate-100 hover:bg-blue-500 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600;
+    }
+
+    .wp-block-button__link {
+      @apply inline-flex items-center justify-center rounded-full py-2 px-4 text-xl font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-slate-900 text-white hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900;
+    }
+  }
+}
+
+@layer components {
+
+  .page-wrapper {
+    @apply mx-auto max-w-screen-xl px-8 md:px-10 lg:px-12 xl:px-28;
+  }
+
+  .mx-break-out {
+      @apply -mx-8 md:-mx-10 lg:-mx-20 xl:mx-[calc(((-100vw+var(--twcb-scrollbar-width))/2)+((theme(screens.xl)+-2*theme(spacing.28))/2))];
+  }
+
+  .px-break-out {
+      @apply px-8 md:px-10 lg:px-20 xl:px-[calc(((100vw-var(--twcb-scrollbar-width))/2)-((theme(screens.xl)-2*theme(spacing.28))/2))];
+  }
+
+
+}

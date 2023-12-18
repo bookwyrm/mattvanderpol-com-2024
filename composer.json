@@ -1,0 +1,20 @@
+{
+    "name": "rms/tailcraft",
+    "description": "Supporting PHP libraries and common code for the TailCraft base theme.",
+    "license": "ISC",
+    "type": "theme",
+    "autoload": {
+        "psr-4": {
+            "TailCraft\\Theme\\": "src-php/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Matt Vanderpol",
+            "email": "matt@redmadronesolutions.com"
+        }
+    ],
+    "require": {
+        "php": ">8.0"
+    }
+}
