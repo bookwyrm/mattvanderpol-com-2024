@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'TailCraft\\Theme\\' => array($baseDir . '/src-php'),
+    'PostTypes\\' => array($vendorDir . '/jjgrainger/posttypes/src'),
 );

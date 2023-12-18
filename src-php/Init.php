@@ -2,11 +2,18 @@
 
 namespace TailCraft\Theme;
 
+use TailCraft\Theme\PostType\CodeReference as CodeReferencePostType;
+use TailCraft\Theme\Taxonomy\Language as LanguageTaxonomy;
+
 class Init {
     public static function run() : void {
         $instance = new static;
         $instance->setupHooks();
+
         new Customizer();
+
+        CodeReferencePostType::setup();
+        LanguageTaxonomy::setup();
     }
 
     protected function setupHooks() {

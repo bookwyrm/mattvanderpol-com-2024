@@ -11,12 +11,20 @@ class ComposerStaticInitbd1e30d19c517b89b4c88d7cad0fc9a0
         array (
             'TailCraft\\Theme\\' => 16,
         ),
+        'P' => 
+        array (
+            'PostTypes\\' => 10,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'TailCraft\\Theme\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src-php',
+        ),
+        'PostTypes\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jjgrainger/posttypes/src',
         ),
     );
 
