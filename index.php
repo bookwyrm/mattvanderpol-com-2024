@@ -1,4 +1,4 @@
-<?php get_header(); ray('index...'); ?>
+<?php get_header(); ?>
 
 <div class="page-wrapper">
 
