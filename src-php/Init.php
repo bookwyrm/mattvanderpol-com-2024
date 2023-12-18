@@ -30,6 +30,11 @@ class Init {
     }
 
     public function enqueueAssets() : void {
+		$prism_css = new Asset('css/prism-1.29.0-b.css');
+		$prism_js = new Asset('js/prism-1.29.0-a.js');
+		\wp_enqueue_style('prism', $prism_css->url(), [], $prism_css->version());
+		\wp_enqueue_script('prism', $prism_js->url(), [], $prism_js->version());
+
         $css = new Asset('css/styles.css');
         /* $js = new Asset('js/app.js'); */
         \wp_enqueue_style('tailcraft', $css->url(), [], $css->version());
