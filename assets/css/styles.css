@@ -1729,6 +1729,12 @@ select {
 .flex {
   display: flex;
 }
+.table {
+  display: table;
+}
+.hidden {
+  display: none;
+}
 .h-32 {
   height: 8rem;
 }
@@ -1869,6 +1875,9 @@ select {
 .shadow-gray-600 {
   --tw-shadow-color: #4b5563;
   --tw-shadow: var(--tw-shadow-colored);
+}
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .transition-transform {
   transition-property: transform;
