@@ -22,13 +22,13 @@ add_filter( 'wpseo_metabox_prio', function() { return 'low'; } );
 	function mv_2024_the_posts_navigation() {
 		the_posts_pagination(
 			array(
-				'before_page_number' => esc_html__( 'Page', 'twentytwentyone' ) . ' ',
+				'before_page_number' => esc_html__( 'Page', 'mattvanderpol-com-2024' ) . ' ',
 				'mid_size'           => 0,
 				'prev_text'          => sprintf(
 					'%s <span class="nav-prev-text">%s</span>',
 					is_rtl() ? '&gt;' : '&lt;',
 					wp_kses(
-						__( 'Newer <span class="nav-short">posts</span>', 'twentytwentyone' ),
+						__( 'Newer <span class="nav-short">posts</span>', 'mattvanderpol-com-2024' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -39,7 +39,7 @@ add_filter( 'wpseo_metabox_prio', function() { return 'low'; } );
 				'next_text'          => sprintf(
 					'<span class="nav-next-text">%s</span> %s',
 					wp_kses(
-						__( 'Older <span class="nav-short">posts</span>', 'twentytwentyone' ),
+						__( 'Older <span class="nav-short">posts</span>', 'mattvanderpol-com-2024' ),
 						array(
 							'span' => array(
 								'class' => array(),
