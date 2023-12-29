@@ -2593,6 +2593,9 @@ select {
   --tw-text-opacity: 1;
   color: rgb(83 115 7 / var(--tw-text-opacity));
 }
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
 @media (prefers-color-scheme: dark) {
 
   .dark\:bg-black {
