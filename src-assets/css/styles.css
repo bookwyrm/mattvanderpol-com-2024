@@ -213,6 +213,26 @@
   }
 }
 
+.navigation.pagination {
+  @apply mt-12 pt-6 border-t-2 border-primary;
+
+  .nav-links {
+    @apply flex space-x-4 items-center;
+
+    a, span.current {
+      @apply px-3 py-1.5 border border-neutral-500 rounded;
+    }
+
+    span.current {
+      @apply font-bold bg-gray-500 text-white;
+    }
+
+    a:hover {
+      @apply bg-neutral-100 underline;
+    }
+  }
+}
+
 .c-photo {
   @apply border-8 border-gray-100 drop-shadow-lg;
 }
