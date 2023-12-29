@@ -17,6 +17,8 @@
                     }
                 }
             }
+
+            mv_2024_the_posts_navigation();
         }
     ?>
 </div>
